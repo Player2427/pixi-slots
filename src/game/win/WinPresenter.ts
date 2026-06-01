@@ -110,7 +110,13 @@ export class WinPresenter {
             duration: 0.8,
             ease: 'power1.out',
             onUpdate: () => {
-              winText.text = `WIN  ${Math.round(counter.value)}`;
+              const value = Math.round(counter.value);
+              if (value%69 === 0) {
+                winText.text = '😍👉👈😊❤️😘💕🥰✨🌙💞😴❤️🌃';
+              } else {
+                winText.text = `WIN  ${value}`;
+              }
+              // winText.text = `WIN  ${Math.round(counter.value)}`;
             },
           },
           '<',

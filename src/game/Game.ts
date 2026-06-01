@@ -96,6 +96,8 @@ export class Game {
 
     this.fsm.transition(GameState.STOPPING);
     await this.reelSet.stop(result.grid, () => this.sound.play('reelStop'));
+    // console.log('server :', result.grid.map((c) => c[1])); // центр по серверу
+    // console.log('display:', this.reelSet.getResult().map((c) => c[1])); // что реально легло
 
     this.fsm.transition(GameState.EVALUATING);
 

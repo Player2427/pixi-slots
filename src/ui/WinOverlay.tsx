@@ -12,7 +12,10 @@ export function WinOverlay() {
 
   return (
     <div className="win-overlay">
-      {t('win')}: <strong>{lastWin}</strong>
+      {lastWin%69 === 0 ? '😍👉👈😊❤️😘💕🥰✨🌙💞😴❤️🌃' :
+      <>
+        {t('win')}: <strong>{lastWin}</strong>
+      </>}
     </div>
   );
 }

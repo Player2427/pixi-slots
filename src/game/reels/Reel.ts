@@ -110,20 +110,21 @@ export class Reel {
 
     for (const s of this.symbols) {
       s.y += delta;
-      if (s.y >= (SPRITE_COUNT - 1) * H) {
+      while (s.y >= (SPRITE_COUNT - 1) * H) {
         s.y -= CYCLE;
-        s.setSymbol(this.pickWrapSymbol());
+        s.setSymbol(this.pickWrapSymbol(s.y));
       }
     }
   }
 
   // While stopping, the last ROWS symbols entering the top get the target
   // symbols so the reel lands on the requested result.
-  private pickWrapSymbol(): SymbolId {
+  private pickWrapSymbol(yAfterWrap: number): SymbolId {
     if (this.state === 'stopping' && this.targets) {
-      const r = Math.round((this.stopTarget - this.position) / H);
-      if (r >= 1 && r <= ROWS) {
-        return this.targets[r - 1];
+      const finalY = yAfterWrap + (this.stopTarget - this.position);
+      const row = Math.round(finalY / H);
+      if (row >= 0 && row < ROWS) {
+        return this.targets[row];
       }
     }
     return randomSymbol();

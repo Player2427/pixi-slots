@@ -16,8 +16,8 @@ export class MockServer implements OutcomeProvider {
 
   async getSpinResult(bet: number): Promise<SpinResult> {
     await this.delay(this.latencyMs);
-
     const grid = this.randomGrid();
+    // grid.forEach((col) => (col[1] = 'lemon')); // центр всегда lemon → линия 0 всегда выигрывает
     const { wins, totalWin } = evaluate(grid, bet);
 
     return { grid, wins, totalWin };

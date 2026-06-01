@@ -54,7 +54,7 @@ export default function App() {
           </div>
         </div>
 
-        <WinOverlay />
+        {/* <WinOverlay /> */}
 
         <div className="hud-bottom">
           <SpinButton onSpin={() => gameRef.current?.spin()} />

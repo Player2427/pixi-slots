@@ -1,7 +1,7 @@
 export type SymbolId =
   | 'cherry'
   | 'lemon'
-  | 'bell'
+  | 'love'
   | 'star'
   | 'seven'
   | 'bar'
@@ -17,7 +17,7 @@ export interface SymbolDef {
 export const SYMBOLS: SymbolDef[] = [
   { id: 'cherry', label: '🍒', color: 0x2b2d42, text: 0xffffff },
   { id: 'lemon', label: '🍋', color: 0x2b2d42, text: 0xffffff },
-  { id: 'bell', label: '🔔', color: 0x2b2d42, text: 0xffffff },
+  { id: 'love', label: '🍓', color: 0x2b2d42, text: 0xffffff },
   { id: 'star', label: '⭐', color: 0x3a2d52, text: 0xffffff },
   { id: 'seven', label: '7', color: 0x52213a, text: 0xffd166 },
   { id: 'bar', label: 'BAR', color: 0x213a52, text: 0x8ecae6 },
@@ -42,7 +42,7 @@ export const DESIGN_HEIGHT = 600;
 
 export const SPIN_SPEED = 2800;
 export const STOP_EXTRA_SYMBOLS = 6;
-export const STOP_DURATION = 0.4;
+export const STOP_DURATION = 0.2;
 export const REEL_STOP_DELAY = 200;
 export const MIN_SPIN_TIME = 600;
 
@@ -66,7 +66,7 @@ export const PAYLINES: number[][] = [
 export const PAYTABLE: Record<SymbolId, [number, number, number]> = {
   cherry: [1, 2, 5],
   lemon: [1, 3, 8],
-  bell: [2, 5, 15],
+  love: [69, 69, 69],
   star: [3, 8, 25],
   seven: [5, 15, 50],
   bar: [4, 12, 40],
