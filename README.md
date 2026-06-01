@@ -32,6 +32,17 @@ npm run preview    # preview the build
 
 Requires Node 18+.
 
+## Deployment
+
+Hosted on GitHub Pages. A GitHub Actions workflow
+(`.github/workflows/deploy.yml`) runs tests, builds the app and publishes it on
+every push to `main`. Live site:
+
+https://player2427.github.io/pixi-slots/
+
+The Vite `base` is set to `/pixi-slots/` so assets resolve under the project
+site path.
+
 ## Architecture
 
 The Pixi game is a set of framework-agnostic TypeScript classes. React only hosts
