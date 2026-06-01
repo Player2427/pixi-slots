@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Game } from '../game/Game';
 import { BalanceBar } from './BalanceBar';
 import { SpinButton } from './SpinButton';
-import { WinOverlay } from './WinOverlay';
+// import { WinOverlay } from './WinOverlay';
 
 export default function App() {
   const hostRef = useRef<HTMLDivElement>(null);
